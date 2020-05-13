@@ -4,7 +4,6 @@ import java.util.ArrayList;
 public class Connector {
 	
 	private Connection connection;
-
 	
 	public void connect(int portNo, String userName, String password) {
 		// Establishing a PostgreSQL database connection
@@ -20,15 +19,5 @@ public class Connector {
 		}
 	}
 	
-	public void close() {
-		// Close the connection
-		try {
-			connection.close();
-			System.out.println("Connection closed");
-		} catch (SQLException exception) {
-			System.out.println("Connection closing failed");
-			exception.printStackTrace();
-		}
-	}
 
 }
